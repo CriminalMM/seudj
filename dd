@@ -708,12 +708,6 @@ KillallButton.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer:kick("reaperhook.ez [REBORNED] | Kill All Worked... Now Rejoin.")
 end)
 
-CustomgunBox.MouseButton1Down:Connect(function(Text)
-	local args = { "Change", Text, "Inv" }
-	game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
-end)
-
-
 wait(0.5)
 
 local MinimizerReapah = Instance.new("ScreenGui")
