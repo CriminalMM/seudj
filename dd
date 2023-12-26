@@ -344,28 +344,44 @@ GodButton.MouseButton1Down:connect(function()
 	end
 end)
 
-CBringAllToggle.MouseButton1Down:connect(function()
-	function teleportPlayerToTarget(targetPlayer)
-		if targetPlayer then
-			local name = targetPlayer.Name
+CBringAllToggle.MouseButton1Down:connect(function(first)
+	if first == true then
+		local LocalPlayer = game:GetService("Players").LocalPlayer
+		_G.active = first -- Set to true when you want the teleportation to occur
+		game.Players.LocalPlayer.Character.Head.Anchored = first
 
-			function cbringTarget()
-				repeat
-					task.wait()
-					game.Players[name].Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 3.6)
-				until game.Players[name].Character.Humanoid.Health == 0
+		local renderConnection
+
+		renderConnection = game:GetService("RunService").RenderStepped:Connect(function()
+			if _G.active then
+				local localPlayer = game.Players.LocalPlayer
+				local teleportPosition = localPlayer.Character.HumanoidRootPart.CFrame.Position + localPlayer.Character.HumanoidRootPart.CFrame.lookVector * 5 -- Adjust the distance as needed
+				local players = game.Players:GetPlayers()
+				local offset = Vector3.new(0, 0, 0) -- Teleport all players to the same position
+
+				for _, player in ipairs(players) do
+					if player ~= localPlayer then
+						player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition + offset)
+					end
+				end
+			else
+				-- If the condition is not true, disconnect the RenderStepped connection to stop the character from moving
+				renderConnection:Disconnect()
 			end
+		end)
 
-			cbringTarget()
-		else
-			print("Player not found!")
-		end
+		-- Display a notification
+		local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
+		local Notify = AkaliNotif.Notify
+
+		wait(0.1)
+
+		Notify({
+			Description = "If you didn't click (TP > Safe Place) Yet Then Do It.";
+			Title = "ReaperCheats.ez | Bats Fight v1";
+			Duration = 10, -- Adjust the duration as needed
+		})
 	end
-
-	for _, player in pairs(game.Players:GetPlayers()) do
-		teleportPlayerToTarget(player)
-	end
-
 end)
 
 NoclipToggle.MouseButton1Down:connect(function(Value)
