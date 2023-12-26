@@ -708,51 +708,41 @@ KillallButton.MouseButton1Down:connect(function()
 	game.Players.LocalPlayer:kick("reaperhook.ez [REBORNED] | Kill All Worked... Now Rejoin.")
 end)
 
-CustomgunBox.MouseButton1Down:connect(function(Text)
-	local args = { [1] = "Change", [2] = Text, [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
-
+CustomgunBox.MouseButton1Down:Connect(function(Text)
+	local args = { "Change", Text, "Inv" }
+	game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
 end)
+
 
 wait(0.5)
 
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local MinimizerReapah = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
-
---Properties:
+local MinimzerButton = Instance.new("TextButton")
 
 MinimizerReapah.Name = "MinimizerReapah"
 MinimizerReapah.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 MinimizerReapah.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = MinimizerReapah
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.108185612, 0, 0, 0)
-Frame.Size = UDim2.new(0, 63, 0, 19)
+MinimzerButton.Name = "MinimzerButton"
+MinimzerButton.Parent = MinimizerReapah
+MinimzerButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+MinimzerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MinimzerButton.BorderSizePixel = 0
+MinimzerButton.Position = UDim2.new(0.458159536, 0, 0.0849673226, 0)
+MinimzerButton.Size = UDim2.new(0, 48, 0, 21)
+MinimzerButton.Font = Enum.Font.SourceSans
+MinimzerButton.Text = "Minimize"
+MinimzerButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+MinimzerButton.TextScaled = true
+MinimzerButton.TextSize = 14.000
+MinimzerButton.TextWrapped = true
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Size = UDim2.new(0, 63, 0, 19)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Minimize"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-TextButton.MouseButton1Down:connect(function()
+MinimzerButton.MouseButton1Down:connect(function()
 	if game.Players.LocalPlayer.PlayerGui.DAGRIMREAPAH.Enabled == true then
 		game.Players.LocalPlayer.PlayerGui.DAGRIMREAPAH.Enabled = false
 	else
 		game.Players.LocalPlayer.PlayerGui.DAGRIMREAPAH.Enabled = true
 	end
 end)
+
+
