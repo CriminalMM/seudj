@@ -1,1 +1,696 @@
-print("hi")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Frame1 = Instance.new("Frame")
+local GodButton = Instance.new("TextButton")
+local KillallButton = Instance.new("TextButton")
+local Frame2 = Instance.new("Frame")
+local SelfOptions = Instance.new("TextLabel")
+local SuicideButton = Instance.new("TextButton")
+local OnlineOptions = Instance.new("TextLabel")
+local CBringAllToggle = Instance.new("TextButton")
+local WeaponOptions = Instance.new("TextLabel")
+local Frame3 = Instance.new("Frame")
+local InfammoButton = Instance.new("TextButton")
+local OpweaponButton = Instance.new("TextButton")
+local NorecoilButton = Instance.new("TextButton")
+local GetallgunsButton = Instance.new("TextButton")
+local CustomgunBox = Instance.new("TextBox")
+local OnlineOptions_2 = Instance.new("TextLabel")
+local Frame4 = Instance.new("Frame")
+local WeaponOptions_2 = Instance.new("TextLabel")
+local FlyToggle = Instance.new("TextButton")
+local NoclipToggle = Instance.new("TextButton")
+local InfjumpToggle = Instance.new("TextButton")
+local DiscomodeToggle = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.515510917, 0, 0.305555522, 0)
+Frame.Size = UDim2.new(0, 331, 0, 346)
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 331, 0, 22)
+Title.Font = Enum.Font.Arial
+Title.Text = "Johnson Is Back Baby! [Admin Panel]"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 21.000
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Frame
+Frame1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0, 0, 0.0655035973, 0)
+Frame1.Size = UDim2.new(0, 331, 0, 2)
+
+GodButton.Name = "GodButton"
+GodButton.Parent = Frame
+GodButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+GodButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GodButton.BorderSizePixel = 0
+GodButton.Position = UDim2.new(0, 0, 0.137717217, 0)
+GodButton.Size = UDim2.new(0, 70, 0, 27)
+GodButton.Font = Enum.Font.Arial
+GodButton.Text = "Attempt God"
+GodButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+GodButton.TextSize = 13.000
+GodButton.TextWrapped = true
+
+KillallButton.Name = "KillallButton"
+KillallButton.Parent = Frame
+KillallButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+KillallButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillallButton.BorderSizePixel = 0
+KillallButton.Position = UDim2.new(0, 0, 0.457917958, 0)
+KillallButton.Size = UDim2.new(0, 70, 0, 27)
+KillallButton.Font = Enum.Font.Arial
+KillallButton.Text = "Kill All [Kicks]"
+KillallButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+KillallButton.TextSize = 12.000
+
+Frame2.Name = "Frame2"
+Frame2.Parent = Frame
+Frame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(0, 0, 0.359982163, 0)
+Frame2.Size = UDim2.new(0, 331, 0, 2)
+
+SelfOptions.Name = "SelfOptions"
+SelfOptions.Parent = Frame
+SelfOptions.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+SelfOptions.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SelfOptions.BorderSizePixel = 0
+SelfOptions.Position = UDim2.new(0, 0, 0.0705521479, 0)
+SelfOptions.Size = UDim2.new(0, 331, 0, 22)
+SelfOptions.Font = Enum.Font.Arial
+SelfOptions.Text = "// Self Options"
+SelfOptions.TextColor3 = Color3.fromRGB(0, 0, 0)
+SelfOptions.TextSize = 21.000
+
+SuicideButton.Name = "SuicideButton"
+SuicideButton.Parent = Frame
+SuicideButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+SuicideButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SuicideButton.BorderSizePixel = 0
+SuicideButton.Position = UDim2.new(0, 0, 0.245079175, 0)
+SuicideButton.Size = UDim2.new(0, 70, 0, 27)
+SuicideButton.Font = Enum.Font.Arial
+SuicideButton.Text = "Suicide"
+SuicideButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuicideButton.TextSize = 13.000
+SuicideButton.TextWrapped = true
+
+OnlineOptions.Name = "OnlineOptions"
+OnlineOptions.Parent = Frame
+OnlineOptions.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+OnlineOptions.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OnlineOptions.BorderSizePixel = 0
+OnlineOptions.Position = UDim2.new(0, 0, 0.365030676, 0)
+OnlineOptions.Size = UDim2.new(0, 331, 0, 22)
+OnlineOptions.Font = Enum.Font.Arial
+OnlineOptions.Text = "// Online Options [Risky]"
+OnlineOptions.TextColor3 = Color3.fromRGB(0, 0, 0)
+OnlineOptions.TextSize = 21.000
+
+CBringAllToggle.Name = "CBringAllToggle"
+CBringAllToggle.Parent = Frame
+CBringAllToggle.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+CBringAllToggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CBringAllToggle.BorderSizePixel = 0
+CBringAllToggle.Position = UDim2.new(0.323262841, 0, 0.457917958, 0)
+CBringAllToggle.Size = UDim2.new(0, 70, 0, 27)
+CBringAllToggle.Font = Enum.Font.Arial
+CBringAllToggle.Text = "CBring All [Toggle]"
+CBringAllToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+CBringAllToggle.TextScaled = true
+CBringAllToggle.TextSize = 12.000
+CBringAllToggle.TextWrapped = true
+
+WeaponOptions.Name = "WeaponOptions"
+WeaponOptions.Parent = Frame
+WeaponOptions.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+WeaponOptions.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WeaponOptions.BorderSizePixel = 0
+WeaponOptions.Position = UDim2.new(0, 0, 0.576687098, 0)
+WeaponOptions.Size = UDim2.new(0, 331, 0, 22)
+WeaponOptions.Font = Enum.Font.Arial
+WeaponOptions.Text = "// Weapon Options"
+WeaponOptions.TextColor3 = Color3.fromRGB(0, 0, 0)
+WeaponOptions.TextSize = 21.000
+
+Frame3.Name = "Frame3"
+Frame3.Parent = Frame
+Frame3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame3.BorderSizePixel = 0
+Frame3.Position = UDim2.new(0, 0, 0.56857115, 0)
+Frame3.Size = UDim2.new(0, 331, 0, 2)
+
+InfammoButton.Name = "InfammoButton"
+InfammoButton.Parent = Frame
+InfammoButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+InfammoButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfammoButton.BorderSizePixel = 0
+InfammoButton.Position = UDim2.new(0, 0, 0.641966999, 0)
+InfammoButton.Size = UDim2.new(0, 70, 0, 27)
+InfammoButton.Font = Enum.Font.Arial
+InfammoButton.Text = "Inf. Ammo"
+InfammoButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfammoButton.TextScaled = true
+InfammoButton.TextSize = 12.000
+InfammoButton.TextWrapped = true
+
+OpweaponButton.Name = "OpweaponButton"
+OpweaponButton.Parent = Frame
+OpweaponButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+OpweaponButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpweaponButton.BorderSizePixel = 0
+OpweaponButton.Position = UDim2.new(0.323262841, 0, 0.641966999, 0)
+OpweaponButton.Size = UDim2.new(0, 70, 0, 27)
+OpweaponButton.Font = Enum.Font.Arial
+OpweaponButton.Text = "OP Weapon"
+OpweaponButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpweaponButton.TextScaled = true
+OpweaponButton.TextSize = 12.000
+OpweaponButton.TextWrapped = true
+
+NorecoilButton.Name = "NorecoilButton"
+NorecoilButton.Parent = Frame
+NorecoilButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+NorecoilButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NorecoilButton.BorderSizePixel = 0
+NorecoilButton.Position = UDim2.new(0.655589104, 0, 0.641966999, 0)
+NorecoilButton.Size = UDim2.new(0, 70, 0, 27)
+NorecoilButton.Font = Enum.Font.Arial
+NorecoilButton.Text = "No Recoil"
+NorecoilButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+NorecoilButton.TextScaled = true
+NorecoilButton.TextSize = 12.000
+NorecoilButton.TextWrapped = true
+
+GetallgunsButton.Name = "GetallgunsButton"
+GetallgunsButton.Parent = Frame
+GetallgunsButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+GetallgunsButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GetallgunsButton.BorderSizePixel = 0
+GetallgunsButton.Position = UDim2.new(0, 0, 0.749328971, 0)
+GetallgunsButton.Size = UDim2.new(0, 70, 0, 27)
+GetallgunsButton.Font = Enum.Font.Arial
+GetallgunsButton.Text = "Get All Guns"
+GetallgunsButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetallgunsButton.TextScaled = true
+GetallgunsButton.TextSize = 12.000
+GetallgunsButton.TextWrapped = true
+
+CustomgunBox.Name = "CustomgunBox"
+CustomgunBox.Parent = Frame
+CustomgunBox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+CustomgunBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CustomgunBox.BorderSizePixel = 0
+CustomgunBox.Position = UDim2.new(0.323262841, 0, 0.749328971, 0)
+CustomgunBox.Size = UDim2.new(0, 69, 0, 26)
+CustomgunBox.Font = Enum.Font.SourceSans
+CustomgunBox.Text = "Type Here!"
+CustomgunBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+CustomgunBox.TextSize = 14.000
+
+OnlineOptions_2.Name = "OnlineOptions"
+OnlineOptions_2.Parent = Frame
+OnlineOptions_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+OnlineOptions_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OnlineOptions_2.BorderSizePixel = 0
+OnlineOptions_2.Position = UDim2.new(0.564954877, 0, 0.763803661, 0)
+OnlineOptions_2.Size = UDim2.new(0, 136, 0, 22)
+OnlineOptions_2.Font = Enum.Font.Arial
+OnlineOptions_2.Text = "<-- Enter Full Gun Name"
+OnlineOptions_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+OnlineOptions_2.TextScaled = true
+OnlineOptions_2.TextSize = 20.000
+OnlineOptions_2.TextWrapped = true
+
+Frame4.Name = "Frame4"
+Frame4.Parent = Frame
+Frame4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame4.BorderSizePixel = 0
+Frame4.Position = UDim2.new(0, 0, 0.85758847, 0)
+Frame4.Size = UDim2.new(0, 331, 0, 2)
+
+WeaponOptions_2.Name = "WeaponOptions"
+WeaponOptions_2.Parent = Frame
+WeaponOptions_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+WeaponOptions_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WeaponOptions_2.BorderSizePixel = 0
+WeaponOptions_2.Position = UDim2.new(0, 0, 0.91194725, 0)
+WeaponOptions_2.Size = UDim2.new(0, 331, 0, 22)
+WeaponOptions_2.Font = Enum.Font.Arial
+WeaponOptions_2.Text = "Credits To > reapersrevenge_"
+WeaponOptions_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+WeaponOptions_2.TextScaled = true
+WeaponOptions_2.TextSize = 21.000
+WeaponOptions_2.TextWrapped = true
+
+FlyToggle.Name = "FlyToggle"
+FlyToggle.Parent = Frame
+FlyToggle.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+FlyToggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FlyToggle.BorderSizePixel = 0
+FlyToggle.Position = UDim2.new(0.323262841, 0, 0.137717232, 0)
+FlyToggle.Size = UDim2.new(0, 70, 0, 27)
+FlyToggle.Font = Enum.Font.Arial
+FlyToggle.Text = "Fly [Toggle]"
+FlyToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyToggle.TextScaled = true
+FlyToggle.TextSize = 13.000
+FlyToggle.TextWrapped = true
+
+NoclipToggle.Name = "NoclipToggle"
+NoclipToggle.Parent = Frame
+NoclipToggle.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+NoclipToggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoclipToggle.BorderSizePixel = 0
+NoclipToggle.Position = UDim2.new(0.323262841, 0, 0.244653597, 0)
+NoclipToggle.Size = UDim2.new(0, 70, 0, 27)
+NoclipToggle.Font = Enum.Font.Arial
+NoclipToggle.Text = "Noclip [Toggle]"
+NoclipToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoclipToggle.TextScaled = true
+NoclipToggle.TextSize = 13.000
+NoclipToggle.TextWrapped = true
+
+InfjumpToggle.Name = "InfjumpToggle"
+InfjumpToggle.Parent = Frame
+InfjumpToggle.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+InfjumpToggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfjumpToggle.BorderSizePixel = 0
+InfjumpToggle.Position = UDim2.new(0.664652765, 0, 0.137717187, 0)
+InfjumpToggle.Size = UDim2.new(0, 70, 0, 27)
+InfjumpToggle.Font = Enum.Font.Arial
+InfjumpToggle.Text = "Inf. Jump [Toggle]"
+InfjumpToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfjumpToggle.TextScaled = true
+InfjumpToggle.TextSize = 13.000
+InfjumpToggle.TextWrapped = true
+
+DiscomodeToggle.Name = "DiscomodeToggle"
+DiscomodeToggle.Parent = Frame
+DiscomodeToggle.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+DiscomodeToggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DiscomodeToggle.BorderSizePixel = 0
+DiscomodeToggle.Position = UDim2.new(0.664652765, 0, 0.244653597, 0)
+DiscomodeToggle.Size = UDim2.new(0, 70, 0, 27)
+DiscomodeToggle.Font = Enum.Font.Arial
+DiscomodeToggle.Text = "Disco Mode [Toggle]"
+DiscomodeToggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+DiscomodeToggle.TextScaled = true
+DiscomodeToggle.TextSize = 13.000
+DiscomodeToggle.TextWrapped = true
+
+GodButton.MouseButton1Down:connect(function()
+	_G.godattempt = true
+
+	while true do
+		if _G.godattempt then
+			local player = game.Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				humanoid.MaxHealth = math.huge
+				humanoid.Health = math.huge
+			end
+		end
+		if not _G.godattempt then
+			break
+		end
+		wait()
+	end
+end)
+
+CBringAllToggle.MouseButton1Down:connect(function()
+	function teleportPlayerToTarget(targetPlayer)
+		if targetPlayer then
+			local name = targetPlayer.Name
+
+			function cbringTarget()
+				repeat
+					task.wait()
+					game.Players[name].Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Position + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 3.6)
+				until game.Players[name].Character.Humanoid.Health == 0
+			end
+
+			cbringTarget()
+		else
+			print("Player not found!")
+		end
+	end
+
+	for _, player in pairs(game.Players:GetPlayers()) do
+		teleportPlayerToTarget(player)
+	end
+
+end)
+
+NoclipToggle.MouseButton1Down:connect(function(Value)
+	if (Value) then
+		NoclipLoop = game:GetService("RunService").Stepped:Connect(function()
+			for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if v:IsA("BasePart") and v.CanCollide == true then
+					v.CanCollide = false
+				end
+			end
+		end)
+	elseif Value == false and NoclipLoop then
+		NoclipLoop:Disconnect()
+	end
+end)
+
+InfammoButton.MouseButton1Down:connect(function()
+	local player = game.Players.LocalPlayer
+
+	local function freezeAmmo(weaponName)
+		local Backpack = player.Backpack
+		local Weapon = Backpack:FindFirstChild(weaponName)
+
+		if Weapon then
+			local ACS_Modulo = Weapon:WaitForChild("ACS_Modulo")
+			local Variaveis = ACS_Modulo:WaitForChild("Variaveis")
+
+			local StoredAmmoValue = Variaveis.StoredAmmo.Value
+			local AmmoValue = Variaveis.Ammo.Value
+
+			while true do
+				Variaveis.StoredAmmo.Value = StoredAmmoValue
+				Variaveis.Ammo.Value = AmmoValue
+				wait(0.1) -- Adjust the wait time as needed
+			end
+		else
+			warn("Weapon not found:", weaponName)
+		end
+	end
+
+	local weaponsToFreeze = {
+		"AK-47 met suppressor",
+		"tommygun",
+		"AKM",
+		"AKM met suppressor",
+		"AKS-74U Met Suppressor",
+		"BE SIG MCX",
+		"Desert Eagle",
+		"Glock 17",
+		"Gold Glock17",
+		"Gold AKM",
+		"Gold Remington 870",
+		"M17",
+		"M9",
+		"MP5SD",
+		"Makarov",
+		"Remington 870",
+		"Revolver",
+		"Rode AKM",
+		"Rode Glock17",
+		"Rode Skorpion",
+		"SIG MCX VIRTUS",
+		"Shield",
+		"Skorpion",
+		"UZI",
+		"Walther P99",
+		"XM2010"
+	}
+
+	for _, weaponName in ipairs(weaponsToFreeze) do
+		spawn(function()
+			freezeAmmo(weaponName)
+		end)
+	end
+
+end)
+
+GetallgunsButton.MouseButton1Down:connect(function()
+	local args = { [1] = "Change", [2] = "tommygun", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "AK-47 met suppressor", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "AKM", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "AKM met suppressor", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "AKS-74U Met Suppressor", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "BE SIG MCX", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Desert Eagle", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Draco", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Glock 17", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Gold AKM", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Gold Glock17", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Gold Remington 870", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "M17", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "M9", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "MP5SD", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Makarov", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Remington 870", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Revolver", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Rode AKM", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Rode Glock17", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Rode Skorpion", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "SIG MCX VIRTUS", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Shield", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Skorpion", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "UZI", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "Walther P99", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+	local args = { [1] = "Change", [2] = "XM2010", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+end)
+
+FlyToggle.MouseButton1Down:connect(function()
+	--// ScriptHere
+end)
+
+InfjumpToggle.MouseButton1Down:connect(function(Value)
+	_G.infinjump = (Value)
+
+	-- Get the local player and their mouse
+	local player = game:GetService("Players").LocalPlayer
+	local mouse = player:GetMouse()
+
+	-- Listen for the spacebar key press to jump repeatedly
+	mouse.KeyDown:connect(function(key)
+		if _G.infinjump and key:byte() == 32 then
+			local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				humanoid:ChangeState("Jumping")
+				wait(0.1)
+				humanoid:ChangeState("Seated")
+			end
+		end
+	end)
+end)
+
+DiscomodeToggle.MouseButton1Down:connect(function(Value)
+	_G.rainbowaura = Value
+
+	if _G.rainbowaura then
+		local function rainbowHighlight()
+			local lp = game:GetService("Players").LocalPlayer
+
+			while _G.rainbowaura do
+				local Highlight = Instance.new("Highlight")
+				Highlight.FillColor = Color3.fromHSV(tick() % 1, 1, 0.80)
+				Highlight.OutlineColor = Color3.fromHSV(tick() % 1, 1, 0.80)
+				Highlight.FillTransparency = 0.40
+				Highlight.Parent = lp.Character
+				wait(0.1)
+				Highlight:Destroy()
+			end
+		end
+
+		-- Start the rainbow aura loop.
+		rainbowHighlight()
+	else
+		-- If rainbow aura is not enabled, call the NormalCharacter function.
+		NormalCharacter()
+	end
+
+end)
+
+NorecoilButton.MouseButton1Down:connect(function()
+	local _player = game:GetService("Players").LocalPlayer
+
+	local weaponNames = {
+		"AK-47 met suppressor",
+		"tommygun",
+		"AKM",
+		"AKM met suppressor",
+		"AKS-74U Met Suppressor",
+		"BE SIG MCX",
+		"Desert Eagle",
+		"Glock 17",
+		"Gold Glock17",
+		"Gold AKM",
+		"Gold Remington 870",
+		"M17",
+		"M9",
+		"MP5SD",
+		"Makarov",
+		"Remington 870",
+		"Revolver",
+		"Rode AKM",
+		"Rode Glock17",
+		"Rode Skorpion",
+		"SIG MCX VIRTUS",
+		"Shield",
+		"Skorpion",
+		"UZI",
+		"Walther P99",
+		"XM2010"
+	}
+
+	local function modifyWeaponModule(weapon)
+		local _gun = _player.Backpack:FindFirstChild(weapon)
+		if _gun then
+			local _module = _gun.ACS_Modulo:FindFirstChild("Settings")
+			if _module then
+				_module = require(_module)
+
+				local function noSpread()
+					_module.MinSpread = 0
+					_module.axSpread = 0
+				end
+
+				local function noRecoil()
+					_module.SwayBase = 0
+					_module.VRecoil = {0, 0}
+					_module.HRecoil = {0, 0}
+					_module.AimRecoilReduction = 50
+					_module.MinRecoilPower = 0
+					_module.MaxRecoilPower = 0
+					_module.RecoilPowerStepAmount = 0
+					_module.RecoilPunch = 0
+					_module.AimInaccuracyStepAmount = 0
+					print("Done modifying", weapon)
+				end
+
+				noRecoil()
+				noSpread()
+			end
+		end
+	end
+
+	for _, weaponName in ipairs(weaponNames) do
+		modifyWeaponModule(weaponName)
+	end
+end)
+
+OpweaponButton.MouseButton1Down:connect(function()
+	local _player = game:GetService("Players").LocalPlayer
+	local gun_names = {
+		"AK-47 met suppressor",
+		"tommygun",
+		"AKM",
+		"AKM met suppressor",
+		"AKS-74U Met Suppressor",
+		"BE SIG MCX",
+		"Desert Eagle",
+		"Glock 17",
+		"Gold Glock17",
+		"Gold AKM",
+		"Gold Remington 870",
+		"M17",
+		"M9",
+		"MP5SD",
+		"Makarov",
+		"Remington 870",
+		"Revolver",
+		"Rode AKM",
+		"Rode Glock17",
+		"Rode Skorpion",
+		"SIG MCX VIRTUS",
+		"Shield",
+		"Skorpion",
+		"UZI",
+		"Walther P99",
+		"XM2010"
+	}
+
+	local function applyModificationsToGun(gun_name)
+		local _gun = _player.Backpack:FindFirstChild(gun_name)
+		if _gun then
+			local _script = _gun.ACS_Modulo.Variaveis:FindFirstChild("Settings")
+			if _script then
+				local _module = require(_script)
+
+				local function rapidFire()
+					_module["Mode"] = "Auto"
+				end 
+
+				local function oneShot()
+					_module["LimbsDamage"] = { 900, 900 } 
+					_module["TorsoDamage"] = { 900, 900 }
+					_module["HeadDamage"] = { 900, 900 }
+				end
+
+				local function noSpread()
+					_module["MinSpread"] = 0
+					_module["axSpread"] = 0
+				end
+
+				local function noRecoil()
+					_module["SwayBase"] = 0
+					_module["VRecoil"] = { 0, 0 }
+					_module["HRecoil"] = { 0, 0 }
+					_module["AimRecoilReduction"] = 50
+					_module["MinRecoilPower"] = 0
+					_module["MaxRecoilPower"] = 0
+					_module["RecoilPowerStepAmount"] = 0
+					_module["RecoilPunch"] = 0
+					_module["AimInaccuracyStepAmount"] = 0
+					print("done")
+				end
+
+				noRecoil()
+				noSpread()
+				oneShot()
+				rapidFire()
+			end
+		end
+	end
+
+	for _, gun_name in ipairs(gun_names) do
+		applyModificationsToGun(gun_name)
+	end
+end)
+
+SuicideButton.MouseButton1Down:connect(function()
+	game.Player.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+KillallButton.MouseButton1Down:connect(function()
+	for k, v in pairs(game.Players:GetChildren()) do 
+		local ohInstance1 = workspace[v.Name].Humanoid
+		game:GetService("ReplicatedStorage").ACS_Engine.Eventos.CreateOwner:FireServer(ohInstance1)
+		local ohInstance1 = workspace[v.Name].Humanoid
+		local ohNumber2 = math.huge
+		local ohNumber3 = 0
+		local ohNumber4 = 0
+		local ohString5 = "{e012c8d3-d924-42c7-9f1b-a05f716bf7aa}-439403718"
+		game:GetService("ReplicatedStorage").ACS_Engine.Eventos.Damage:FireServer(ohInstance1, ohNumber2, ohNumber3, ohNumber4, ohString5)
+	end
+	wait(0.3)
+	game.Players.LocalPlayer:kick("reaperhook.ez [REBORNED] | Kill All Worked... Now Rejoin.")
+end)
+
+CustomgunBox.MouseButton1Down:connect(function(Text)
+	local args = { [1] = "Change", [2] = Text, [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+
+end)
